@@ -9,6 +9,7 @@
         body{
             display: flex;
             justify-content: center;
+            margin: 0px;
         }
         #contain{
             width: 400px;
@@ -19,7 +20,7 @@
             flex-direction: column;
         }
         #top{
-            width: 320px;
+            width: 400px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -48,7 +49,7 @@
             transition: transform 3s cubic-bezier(.2, 0.93, .43, 1);
         }
         #choice{
-            width: 320px;
+            width: 400px;
             height: 250px;
             background-color: chocolate;
             display: flex;
@@ -56,7 +57,7 @@
             flex-wrap: wrap;
         }
         .store{
-            width: 130px;
+            width: 170px;
             height: 40px;
             margin: 0px 12.5px;
             background-color: coral;
@@ -73,19 +74,26 @@
             background-color: rgb(151, 107, 52);
         }
         .text{
-            font-size: 18px;
+            font-size: 20px;
             color: black;
             font-family: 'cwTeXYen', sans-serif;
         }
         #change{
             width: 100%;
-            height: 45px;
-            background-color: cornflowerblue;
+            height: 50px;
+            font-size: 18px;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            border-top: 2px solid black;
+            line-height: 50px;
+            font-family: 'cwTeXYen', sans-serif;
+            background-color: rgb(255, 255, 255);
         }
         #white{
             width: 300px;
             height: 250px;
-            display:none;
+            display: none;
         }
         #result{
             width: 300px;
@@ -207,7 +215,7 @@
                 </a>
             </div>
         </div>
-        <div id="change" ></div>
+        <div id="change" >繼續探索</div>
         <div id="white"></div>
         <div id="result">
             <div id="img"></div>
