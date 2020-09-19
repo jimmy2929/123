@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        #contain{
+            width: 400px;
+            background-color: rgb(241, 197, 143);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #top{
+            width: 300px;
+            height: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #draw{
+            width: 280px;
+            height: 280px;
+            background-color: rgb(230, 228, 127);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #circle{
+            width: 250px;
+            height: 250px;
+            background-color: rgba(92, 87, 80,0.8);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+        }
+        #point{
+            width: 100px;
+            position: absolute;
+            z-index: 3;
+            transition: transform 3s cubic-bezier(.2, 0.93, .43, 1);
+        }
+        #choice{
+            width: 270px;
+            height: 320px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .store{
+            width: 110px;
+            height: 40px;
+            margin: 0px 12.5px;
+            background-color: coral;
+            text-decoration: none;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: left;
+            align-items: center;
+        }
+        .sq{
+            width: 20px;
+            height: 20px;
+            /* margin: 5px; */
+            background-color: rgb(151, 107, 52);
+        }
+        .text{
+            font-size: 18px;
+            color: black;
+            font-family: 'cwTeXYen', sans-serif;
+        }
+        #change{
+            width: 100%;
+            height: 45px;
+            background-color: cornflowerblue;
+        }
+        #white{
+            width: 300px;
+            height: 250px;
+        }
+        #result{
+            width: 300px;
+            background-color: rgb(122, 62, 33);
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+        }
+        #img{
+            width: 300px;
+            height: 250px;
+            background-color: rgb(165, 113, 113);
+        }
+        #intro{
+            width: 300px;
+            height: 200px;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: left;
+        }
+        #s_name{
+            width: 100%;
+            text-align: left;
+            font-family: 'cwTeXYen', sans-serif;
+            font-size: 35px;
+            margin: 8px 0px;
+            background-color: rgb(135, 222, 154);
+        }
+        #s_score{
+            width: 100%;
+            text-align: left;
+            font-family: 'cwTeXYen', sans-serif;
+            font-size: 22px;
+            margin: 8px 0px;
+            background-color: rgb(135, 222, 154);
+        }
+        #s_distance{
+            width: 100%;
+            text-align: left;
+            font-family: 'cwTeXYen', sans-serif;
+            font-size: 22px;
+            margin: 8px 0px;
+            background-color: rgb(135, 222, 154);
+        }
+        #s_time{
+            width: 100%;
+            text-align: left;
+            font-family: 'cwTeXYen', sans-serif;
+            font-size: 22px;
+            margin: 8px 0px;
+            background-color: rgb(135, 222, 154);
+        }
+        #func{
+            width: 300px;
+            height: 150px;
+            background-color: rgb(153, 128, 95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .function{
+            width: 80px;
+            height: 80px;
+            background-color: cadetblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <div id="top">
+            <div id="draw">
+                <div id="circle"></div>
+                <img id="point" src="img/指標.png" alt="">
+            </div>
+            <div id="choice">
+                <a id="1" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">滄洲燒臘店</div>
+                </a>
+                <a id="2" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">珍寶燒臘</div>
+                </a>
+                <a id="3" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">佳佳早餐店</div>
+                </a>
+                <a id="4" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">麥軒活力站</div>
+                </a>
+                <a id="5" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">麥當勞中山店</div>
+                </a>
+                <a id="6" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">吃飯大學</div>
+                </a>
+                <a id="7" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">試嘗之</div>
+                </a>
+                <a id="8" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">異國便當店</div>
+                </a>
+                <a id="9" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">JL</div>
+                </a>
+                <a id="10" class="store" href="#result">
+                    <div class="sq"></div>
+                    <div class="text">陳媽媽便當店</div>
+                </a>
+            </div>
+            <a id="change" href="#result" ></a>
+        </div>
+        <div id="white"></div>
+        <div id="result">
+            <div id="img"></div>
+            <div id="intro">
+                <div id="s_name">滄洲燒臘店</div>
+                <div id="s_score">4.7</div>
+                <div id="s_distance">1.3公里</div>
+                <div id="s_time">11:00-23:00 營業中</div>
+            </div>
+            <div id="func">
+                <div class="function"></div>
+                <div class="function"></div>
+                <div class="function"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let getEle = document.getElementsByClassName.bind(document);
+        let pointer = document.getElementById('point');
+        let result = document.getElementById('s_name');
+
+        let onRotation = false; //紀錄有沒有在轉
+
+        let store_result = ['滄洲燒臘店','珍寶燒臘','佳佳早餐店','麥軒活力站','麥當勞中山店','吃飯大學','試嘗之','異國便當店','JL','陳媽媽便當店']
+
+
+        //隨機角度
+
+        let getStore =(function (){
+            currentDeg = 0;
+            return function () {
+                //轉兩到三圈
+                let rotateDeg = Math.random() * 360 +1080;
+                currentDeg += rotateDeg;
+                let rewardText = store_result[Math.floor((currentDeg+18) % 360 / 36)]
+
+                return {
+                    deg:currentDeg,
+                    text: rewardText
+                }
+            }
+        })();
+
+        pointer.addEventListener('click',() => {
+            if(onRotation) return;
+            console.log('開始選店');
+            onRotation = true;
+            let nextStatus = getStore();
+            console.log(nextStatus);
+            result.innerHTML = nextStatus.text;
+            pointer.style.transform = `rotateZ(${nextStatus.deg}deg)`;
+        })
+
+        pointer.addEventListener('transitionend',() => {
+            console.log('抽店結束');
+            onRotation = false;
+        })
+    </script>
+</body>
+</html>
