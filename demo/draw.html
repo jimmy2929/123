@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
@@ -341,6 +343,18 @@
         </div>
     </div>
     <script>
+        function initializeApp(data) { 
+            var userid = data.context.userid;
+        }
+        $(document).ready(function () {
+            liff.init(function (data) {
+                initializeApp(data);
+            })
+        })
+
+
+
+
         let getEle = document.getElementsByClassName.bind(document);
         let pointer = document.getElementById('point');
         let result = document.getElementById('s_name');
