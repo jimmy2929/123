@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
@@ -44,15 +45,17 @@
             justify-content: center;
             align-items: center;
         }
-        #bc{
+
+        #bc {
             width: 43vh;
             height: 43vh;
             background-color: cadetblue;
             border-radius: 50%;
-            box-shadow:3px 3px 25px #202020;
+            box-shadow: 3px 3px 25px #202020;
             position: absolute;
             z-index: 1;
         }
+
         #circle {
             width: 45vh;
             height: 45vh;
@@ -64,7 +67,7 @@
         #point {
             height: 15vh;
             width: 15vh;
-            background-color: #9c978c;
+            background-color: #b6ac98;
             position: absolute;
             border-radius: 50%;
             z-index: 3;
@@ -79,7 +82,7 @@
             border-width: 8vh 4vh;
             border-style: solid;
             border-color: transparent;
-            border-bottom-color:#9c978c;
+            border-bottom-color: #b6ac98;
             transform-origin: center;
         }
 
@@ -96,7 +99,7 @@
             height: 5vh;
             margin: 1vh 5vw;
             text-decoration: none;
-            box-shadow: 1vh 1vh  #a39485;
+            box-shadow: 1vh 1vh #a39485;
             border: 1.5px solid #a39485;
             display: flex;
             flex-wrap: nowrap;
@@ -104,61 +107,70 @@
             align-items: center;
         }
 
-        a:nth-child(1) .sq{
+        a:nth-child(1) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
-            background: #C1B891;
+            background: #b4a57b;
         }
-        a:nth-child(2) .sq{
+
+        a:nth-child(2) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #e39b64d7;
         }
-        a:nth-child(3) .sq{
+
+        a:nth-child(3) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
-            background: #D4C793;
+            background: #c7bc92;
         }
-        a:nth-child(4) .sq{
+
+        a:nth-child(4) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #f8c255d5;
         }
-        a:nth-child(5) .sq{
+
+        a:nth-child(5) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #b3cfe2e3;
         }
-        a:nth-child(6) .sq{
+
+        a:nth-child(6) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #ebe5d9;
         }
-        a:nth-child(7) .sq{
+
+        a:nth-child(7) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
-            background: #b5c1b4;
+            background: #9ec098;
         }
-        a:nth-child(8) .sq{
+
+        a:nth-child(8) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #D5D2DD;
         }
-        a:nth-child(9) .sq{
+
+        a:nth-child(9) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
             background: #B1BEC4;
         }
-        a:nth-child(10) .sq{
+
+        a:nth-child(10) .sq {
             width: 2.5vh;
             height: 2.5vh;
             margin: 5px;
@@ -279,13 +291,13 @@
         <div id="top">
             <div id="draw">
                 <div id="bc"></div>
-                <img  id="circle" src="img/draw.png" alt="">
+                <img id="circle" src="img/draw.png" alt="">
                 <div id="point"></div>
             </div>
             <div id="choice">
                 <a id="1" class="store" href="#result">
                     <div class="sq"></div>
-                    <div class="text">滄洲燒臘店</div>
+                    <div class="text">滄洲燒臘飯</div>
                 </a>
                 <a id="2" class="store" href="#result">
                     <div class="sq"></div>
@@ -343,7 +355,7 @@
         </div>
     </div>
     <script>
-        function initializeApp(data) { 
+        function initializeApp(data) {
             var userid = data.context.userid;
         }
         $(document).ready(function () {
@@ -395,7 +407,16 @@
             console.log('抽店結束');
             onRotation = false;
         })
-    </script>
-</body>
+                $(document).ready(function () {
+                    $(function () {
+                        $('#point').click(function () {
+                            setTimeout(() => { // 等閃爍三下結束
+                                $('html,body').animate({ scrollTop: $('#result').offset().top }, 500);
+                            }, 3000);
+                        });
+                    });
+                }); 
+            </script>
+    </body>
 
 </html>
