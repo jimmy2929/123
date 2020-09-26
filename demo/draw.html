@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
     <style>
         @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 
@@ -22,7 +20,7 @@
 
         #contain {
             width: 100vw;
-            height: 240vh;
+            height: 200vh;
             display: flex;
             justify-content: left;
             align-items: center;
@@ -179,7 +177,7 @@
 
 
         .text {
-            font-size: 20px;
+            font-size: 4vw;
             color: rgb(68, 65, 51);
             font-family: Microsoft JhengHei;
             font-weight: 600;
@@ -196,14 +194,7 @@
             box-shadow: -3px 0px 5px black;
             line-height: 10vh;
             font-family: Microsoft JhengHei;
-            font-weight: 600;
         }
-
-        #white {
-            width: 100vw;
-            height: 40vh;
-        }
-
         #result {
             width: 100vw;
             height: 100vh;
@@ -280,8 +271,22 @@
         .function {
             width: 15vh;
             height: 15vh;
-            background-color: cadetblue;
             margin: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon{
+            width: 6vh;
+            margin: 1vh;
+        }
+        .fun_txt{
+            font-family: Microsoft JhengHei;
+            color: rgba(0, 0, 0, 0.616);
+            text-align: center;
+            font-weight: 600;
+            font-size: 3vh;
         }
     </style>
 </head>
@@ -338,7 +343,7 @@
             </div>
         </div>
         <div id="change">繼續探索</div>
-        <div id="white"></div>
+        
         <div id="result">
             <div id="img"></div>
             <div id="intro">
@@ -348,12 +353,15 @@
                 <div id="s_time">11:00-23:00 營業中</div>
             </div>
             <div id="func">
-                <div class="function"></div>
-                <div class="function"></div>
-                <div class="function"></div>
+                <div class="function"><img class="icon" src="img/phone.png" alt=""><div class="fun_txt">致電</div></div>
+                <div class="function"><img class="icon" src="img/go.png" alt=""><div class="fun_txt">馬上去</div></div>
+                <div class="function"><img class="icon" src="img/share.png" alt=""><div class="fun_txt">分享</div></div>
             </div>
         </div>
     </div>
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script>
         function initializeApp(data) {
             var userid = data.context.userid;
