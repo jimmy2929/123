@@ -86,7 +86,7 @@
 
         #choice {
             width: 100vw;
-            height: 45vh;
+            height: 47vh;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -185,14 +185,14 @@
 
         #change {
             width: 100vw;
-            height: 10vh;
+            height: 8vh;
             font-size: 4vh;
             color: rgba(48, 38, 30, 0.801);
             background-color: rgba(168, 133, 109, 0.89);
             font-weight: 600;
             text-align: center;
             box-shadow: -3px 0px 5px black;
-            line-height: 10vh;
+            line-height: 8vh;
             font-family: Microsoft JhengHei;
         }
         #result {
@@ -208,13 +208,15 @@
         #img {
             width: 100vw;
             height: 40vh;
-            background-color: rgb(165, 113, 113);
         }
-
+        #img img{
+            height: 40vh;
+            opacity: 0.6;
+        }
         #intro {
             width: 90vw;
-            height: 30vh;
-            display: inline-flex;
+            height: 32vh;
+            display:flex;
             flex-direction: column;
             align-items: center;
             justify-content: left;
@@ -222,12 +224,13 @@
 
         #s_name {
             width: 90vw;
-            height: 5vh;
+            height: 8vh;
             text-align: left;
             font-family: Microsoft JhengHei;
+            color: rgb(61, 59, 59);
             font-weight: 600;
-            font-size: 5vh;
-            margin: 1vh 0px;
+            font-size: 8vh;
+            margin-bottom: 3vh;
         }
 
         #s_score {
@@ -236,8 +239,8 @@
             font-family: Microsoft JhengHei;
             color: rgba(0, 0, 0, 0.616);
             font-weight: 600;
-            font-size: 3.8vh;
-            margin: 1vh 0px;
+            font-size: 3vh;
+            margin-bottom: 1vh;
         }
 
         #s_distance {
@@ -246,8 +249,8 @@
             font-family: Microsoft JhengHei;
             color: rgba(0, 0, 0, 0.616);
             font-weight: 600;
-            font-size: 3.8vh;
-            margin: 1vh 0px;
+            font-size: 3vh;
+            margin-bottom: 1vh;
         }
 
         #s_time {
@@ -256,13 +259,13 @@
             font-family: Microsoft JhengHei;
             color: rgba(0, 0, 0, 0.616);
             font-weight: 600;
-            font-size: 3.8vh;
-            margin: 1vh 0px;
+            font-size: 3vh;
+            margin-bottom: 1vh;
         }
 
         #func {
             width: 100vw;
-            height: 30vh;
+            height: 20vh;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -288,6 +291,18 @@
             font-weight: 600;
             font-size: 3vh;
         }
+        #change_down {
+            width: 100vw;
+            height: 8vh;
+            font-size: 4vh;
+            color: rgba(48, 38, 30, 0.801);
+            background-color: rgba(168, 133, 109, 0.89);
+            font-weight: 600;
+            text-align: center;
+            box-shadow: -3px 0px 5px black;
+            line-height: 8vh;
+            font-family: Microsoft JhengHei;
+        }
     </style>
 </head>
 
@@ -296,7 +311,7 @@
         <div id="top">
             <div id="draw">
                 <div id="bc"></div>
-                <img id="circle" src="img/draw.png" alt="">
+                <img id="circle" src="static/img/draw.png" alt="">
                 <div id="point"></div>
             </div>
             <div id="choice">
@@ -345,18 +360,19 @@
         <div id="change">繼續探索</div>
         
         <div id="result">
-            <div id="img"></div>
+            <div id="img"><img src="../static/img/bgi.jpg" alt=""></div>
             <div id="intro">
                 <div id="s_name">滄洲燒臘店</div>
-                <div id="s_score">4.7</div>
-                <div id="s_distance">1.3公里</div>
-                <div id="s_time">11:00-23:00 營業中</div>
+                <div id="s_score">評分:4.7</div>
+                <div id="s_distance">距離:1.3公里</div>
+                <div id="s_time">營業時間:11:00-23:00</div>
             </div>
             <div id="func">
                 <div class="function"><img class="icon" src="img/phone.png" alt=""><div class="fun_txt">致電</div></div>
                 <div class="function"><img class="icon" src="img/go.png" alt=""><div class="fun_txt">馬上去</div></div>
                 <div class="function"><img class="icon" src="img/share.png" alt=""><div class="fun_txt">分享</div></div>
             </div>
+            <div id="change_down">我再選選</div>
         </div>
     </div>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
